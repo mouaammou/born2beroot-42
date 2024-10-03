@@ -108,15 +108,15 @@ SSH Configuration
 
 SSH is used to remotely manage the server securely.
 
-1.  bashCopy codesudo apt install openssh-serversudo systemctl enable sshsudo systemctl start ssh
+1.  sudo apt install openssh-serversudo systemctl enable sshsudo systemctl start ssh
     
 2.  **Root login disabled** for security reasons:
     
-    *   bashCopy codePermitRootLogin no
+    *   PermitRootLogin no
         
-3.  bashCopy codePort 4242
+3.  Port 4242
     
-4.  bashCopy codesudo systemctl restart ssh
+4.  sudo systemctl restart ssh
     
 
 Firewall Configuration (UFW)
@@ -124,11 +124,11 @@ Firewall Configuration (UFW)
 
 The firewall is configured to allow only essential services.
 
-1.  bashCopy codesudo apt install ufwsudo ufw enable
+1.  sudo apt install ufwsudo ufw enable
     
-2.  bashCopy codesudo ufw allow 4242/tcp
+2. sudo ufw allow 4242/tcp
     
-3.  bashCopy codesudo ufw status
+3.  sudo ufw status
     
 
 Password Policies
